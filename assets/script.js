@@ -14,3 +14,8 @@ $(".description").each(function() {
         $(this).addClass("future");
     }
 });
+
+$(":button").on("click", function() {
+    var text = $(this).prev("textarea");
+    localStorage.setItem(text[0].id, text.val())
+});
